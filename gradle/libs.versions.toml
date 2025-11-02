@@ -58,6 +58,7 @@ benchmarkMacroJunit4 = "1.2.4"
 baselineprofile = "1.4.0"
 profileinstaller = "1.4.1"
 ktor = "3.3.0"
+guava = "33.2.1-android"
 
 [libraries]
 androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "cameraCore" }
@@ -131,6 +132,7 @@ sonner = { module = "io.github.brdominguez:compose-sonner", version.ref = "sonne
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
 reorderable = { module = "sh.calvin.reorderable:reorderable", version.ref = "reorderable" }
 commons-text = { module = "org.apache.commons:commons-text", version.ref = "commons-text" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
 modelcontextprotocol-kotlin-sdk = { module = "io.modelcontextprotocol:kotlin-sdk", version.ref = "mcp" }
 pebble = { module = "io.pebbletemplates:pebble", version.ref = "pebble" }
 androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }

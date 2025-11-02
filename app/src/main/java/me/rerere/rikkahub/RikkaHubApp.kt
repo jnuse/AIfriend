@@ -4,8 +4,6 @@ import android.app.Application
 import android.util.Log
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationManagerCompat
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.google.firebase.remoteconfig.remoteConfigSettings
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
@@ -19,7 +17,7 @@ import me.rerere.rikkahub.di.dataSourceModule
 import me.rerere.rikkahub.di.repositoryModule
 import me.rerere.rikkahub.di.viewModelModule
 import me.rerere.rikkahub.utils.DatabaseUtil
-import org.koin.android.ext.android.get
+import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.workmanager.koin.workManagerFactory
@@ -30,6 +28,8 @@ private const val TAG = "RikkaHubApp"
 const val CHAT_COMPLETED_NOTIFICATION_CHANNEL_ID = "chat_completed"
 
 class RikkaHubApp : Application() {
+    private val appScope: AppScope by inject()
+
     override fun onCreate() {
         super.onCreate()
         startKoin {
@@ -38,26 +38,17 @@ class RikkaHubApp : Application() {
             workManagerFactory()
             modules(appModule, viewModelModule, dataSourceModule, repositoryModule)
         }
-        this.createNotificationChannel()
+        createNotificationChannel()
 
         // set cursor window size
         DatabaseUtil.setCursorWindowSize(16 * 1024 * 1024)
 
         // delete temp files
         deleteTempFiles()
-
-        // Init remote config
-        get<FirebaseRemoteConfig>().apply {
-            setConfigSettingsAsync(remoteConfigSettings {
-                minimumFetchIntervalInSeconds = 1800
-            })
-            setDefaultsAsync(R.xml.remote_config_defaults)
-            fetchAndActivate()
-        }
     }
 
     private fun deleteTempFiles() {
-        get<AppScope>().launch(Dispatchers.IO) {
+        appScope.launch(Dispatchers.IO) {
             val dir = appTempFolder
             if (dir.exists()) {
                 dir.deleteRecursively()
@@ -80,7 +71,7 @@ class RikkaHubApp : Application() {
 
     override fun onTerminate() {
         super.onTerminate()
-        get<AppScope>().cancel()
+        appScope.cancel()
     }
 }
 
