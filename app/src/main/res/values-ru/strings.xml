@@ -253,47 +253,12 @@
   <string name="history_page_title">История чатов</string>
   <string name="history_page_undo">Отменить</string>
   <string name="history_page_unpin">Открепить</string>
-  <string name="imggen_page_aspect_ratio">Соотношение сторон изображения</string>
-  <string name="imggen_page_aspect_ratio_desc">Выберите соотношение сторон для сгенерированных изображений</string>
-  <string name="imggen_page_aspect_ratio_landscape">16:9 Альбомная</string>
-  <string name="imggen_page_aspect_ratio_portrait">9:16 Портрет</string>
-  <string name="imggen_page_aspect_ratio_square">1:1 Квадрат</string>
-  <string name="imggen_page_cancel">Отмена</string>
-  <string name="imggen_page_cancel_generation_message">Вы уверены, что хотите отменить генерацию изображения?</string>
-  <string name="imggen_page_cancel_generation_title">Отменить генерацию</string>
-  <string name="imggen_page_confirm">Подтвердить</string>
-  <string name="imggen_page_delete">Удалить</string>
-  <string name="imggen_page_gallery">Галерея</string>
-  <string name="imggen_page_generate_image">Сгенерировать изображение</string>
-  <string name="imggen_page_generation_count">Количество генераций</string>
-  <string name="imggen_page_generation_count_desc">Количество изображений для генерации за раз</string>
-  <string name="imggen_page_image_saved_success">Изображение сохранено в галерею</string>
-  <string name="imggen_page_model_selection">Выбор модели</string>
-  <string name="imggen_page_model_selection_desc">Выберите модель ИИ для генерации изображений</string>
-  <string name="imggen_page_no_generated_images">Нет сгенерированных изображений</string>
-  <string name="imggen_page_prompt_placeholder">Опишите изображение, которое хотите сгенерировать…</string>
-  <string name="imggen_page_save">Сохранить</string>
-  <string name="imggen_page_save_failed">Не удалось сохранить: %1$s</string>
-  <string name="imggen_page_settings_title">Настройки генерации изображений</string>
-  <string name="imggen_page_title">Генерация изображений</string>
-  <string name="language_english">🇺🇸 Английский</string>
-  <string name="language_french">🇫🇷 Французский</string>
-  <string name="language_german">🇩🇪 Немецкий</string>
-  <string name="language_italian">🇮🇹 Итальянский</string>
-  <string name="language_japanese">🇯🇵 Японский</string>
-  <string name="language_korean">🇰🇷 Корейский</string>
-  <string name="language_simplified_chinese">🇷🇺 Упрощённый китайский</string>
-  <string name="language_spanish">🇪🇸 Испанский</string>
-  <string name="language_traditional_chinese">🇨🇳 繁體中文</string>
   <string name="mcp_picker_syncing">Синхронизация MCP-серверов…</string>
   <string name="mcp_picker_title">Серверы MCP</string>
   <string name="menu">Меню</string>
   <string name="menu_page_afternoon_greeting">Добрый день👋</string>
-  <string name="menu_page_ai_translator">Переводчик ИИ</string>
   <string name="menu_page_evening_greeting">Добрый вечер👋</string>
-  <string name="menu_page_image_generation">Генерация изображений</string>
   <string name="menu_page_knowledge_base">База знаний (в разработке)</string>
-  <string name="menu_page_llm_leaderboard">Таблица лидеров LLM</string>
   <string name="menu_page_morning_greeting">Доброе утро👋</string>
   <string name="menu_page_night_greeting">Поздно, береги себя 👋</string>
   <string name="mermaid_export">Экспорт</string>
@@ -646,14 +611,9 @@
   <string name="translation_language_selection_title">Выберите язык перевода</string>
   <string name="translation_model_not_configured">Модель перевода не настроена</string>
   <string name="translation_text">Перевод</string>
-  <string name="translator_page_cancel">Отмена</string>
-  <string name="translator_page_input_placeholder">Введите текст для перевода...</string>
   <string name="translator_page_input_text">Введите текст</string>
   <string name="translator_page_result">Результат перевода</string>
-  <string name="translator_page_result_placeholder">Результат перевода будет показан здесь</string>
   <string name="translator_page_target_language">Целевой язык:</string>
-  <string name="translator_page_title">Переводчик</string>
-  <string name="translator_page_translate">Перевести</string>
   <string name="tts">TTS</string>
   <string name="unknown_language">Неизвестный язык</string>
   <string name="unpin_chat">Открепить чат</string>

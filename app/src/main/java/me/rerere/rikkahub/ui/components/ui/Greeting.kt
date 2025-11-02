@@ -18,10 +18,10 @@ fun Greeting(
     fun getGreetingMessage(): String {
         val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
         return when (hour) {
-            in 5..11 -> stringResource(id = R.string.menu_page_morning_greeting)
-            in 12..17 -> stringResource(id = R.string.menu_page_afternoon_greeting)
-            in 18..22 -> stringResource(id = R.string.menu_page_evening_greeting)
-            else -> stringResource(id = R.string.menu_page_night_greeting)
+            in 5..11 -> stringResource(id = R.string.greeting_morning)
+            in 12..17 -> stringResource(id = R.string.greeting_afternoon)
+            in 18..22 -> stringResource(id = R.string.greeting_evening)
+            else -> stringResource(id = R.string.greeting_night)
         }
     }
 

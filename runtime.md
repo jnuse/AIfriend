@@ -164,6 +164,20 @@ AIfriend/
 
 ## 🚀 最新变更
 
+### Menu 功能移除与 UI 布局调整
+
+为了精简应用功能并优化用户界面，我们执行了以下两项关键变更：
+
+1.  **彻底移除 Menu 功能**:
+    -   **核心逻辑**: 删除了与“Menu”功能相关的所有 Kotlin 源代码文件，包括 `MenuPage.kt`、AI 翻译 (`TranslatorPage.kt`, `TranslatorVM.kt`) 和图像生成 (`ImgGenPage.kt`, `ImgGenVM.kt`) 的实现。
+    -   **UI 入口**: 移除了 `ChatDrawer.kt` 中触发 Menu 页面的 `DrawerAction` 按钮。
+    -   **导航与依赖**: 清理了 `RouteActivity.kt` 中的相关导航路由，并在 `ViewModelModule.kt` 中移除了对应的 ViewModel 依赖注入。
+    -   **资源清理**: 从 `strings.xml` 中删除了数十个相关字符串，并移除了 `assets` 目录下的横幅图片资源。
+
+2.  **UI 布局调整 (ChatDrawer.kt)**:
+    -   **优化布局**: 为了填补移除 Menu 按钮后留下的空白，我们将 `AssistantPicker` 组件从其独立位置整体移动到了底部的操作栏中。
+    -   **统一风格**: `AssistantPicker` 现在与 `Settings` 按钮并列显示，两者通过设置 `Modifier.weight(1f)` 均分空间，保持了 UI 的一致性和简洁性。
+
 ### 移除 Firebase 功能
 
 为了能在没有`google-services.json`文件的情况下编译和运行项目,我们进行了一系列代码修改。核心操作包括:
@@ -188,4 +202,17 @@ AIfriend/
 
 ---
 
+## 💧 移除水印与品牌信息清单
+
+根据要求，以下水印和品牌信息需要从代码中移除：
+
+- **[ ] 移除聊天记录导出水印**:
+  - **文件**: `app/src/main/java/me/rerere/rikkahub/ui/pages/chat/Export.kt`
+  - **目标**: 删除在导出内容中添加的 `rikka-ai.com` 文本。
+
+- **[ ] 移除 Mermaid 图表水印**:
+  - **文件**: `app/src/main/java/me/rerere/rikkahub/ui/components/richtext/Mermaid.kt`
+  - **目标**: 删除在 Mermaid 图表右下角绘制的 `rikka-ai.com` 水印。
+
 **此文件旨在为AI提供上下文,以便在未来的会话中快速理解项目背景和当前状态。**
+

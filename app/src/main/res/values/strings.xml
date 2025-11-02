@@ -125,14 +125,6 @@
   <string name="setting_model_page_chat_model_desc">Global default chat model</string>
 
   <!-- Translator Page -->
-  <string name="translator_page_title">Translator</string>
-  <string name="translator_page_input_text">Input Text</string>
-  <string name="translator_page_input_placeholder">Enter text to translate...</string>
-  <string name="translator_page_result">Translation Result</string>
-  <string name="translator_page_result_placeholder">Translation result will be shown here</string>
-  <string name="translator_page_target_language">Target Language:</string>
-  <string name="translator_page_translate">Translate</string>
-  <string name="translator_page_cancel">Cancel</string>
 
   <!-- Assistant Page -->
   <string name="assistant_page_title">Assistant Settings</string>
@@ -215,14 +207,6 @@
   <string name="theme_name_spring">Meadow Green</string>
 
   <!-- Menu Page -->
-  <string name="menu_page_morning_greeting">Good morning\uD83D\uDC4B</string>
-  <string name="menu_page_afternoon_greeting">Good afternoon\uD83D\uDC4B</string>
-  <string name="menu_page_evening_greeting">Good evening\uD83D\uDC4B</string>
-  <string name="menu_page_night_greeting">It\'s late, take care\uD83D\uDC4B</string>
-  <string name="menu_page_ai_translator">AI Translator</string>
-  <string name="menu_page_image_generation">Image Generation</string>
-  <string name="menu_page_knowledge_base">Knowledge Base (WIP)</string>
-  <string name="menu_page_llm_leaderboard">LLM Leaderboard</string>
 
   <!-- ModelList Page -->
   <string name="model_list_select_model">Select Model</string>
@@ -617,15 +601,15 @@
   <string name="translating">Translating...</string>
 
   <!-- Language Names with Emojis -->
-  <string name="language_simplified_chinese">🇨🇳 简体中文</string>
+  <string name="language_simplified_chinese">🇨🇳 Simplified Chinese</string>
   <string name="language_english">🇺🇸 English</string>
-  <string name="language_traditional_chinese">🇨🇳 繁體中文</string>
-  <string name="language_japanese">🇯🇵 日本語</string>
-  <string name="language_korean">🇰🇷 한국어</string>
-  <string name="language_french">🇫🇷 Français</string>
-  <string name="language_german">🇩🇪 Deutsch</string>
-  <string name="language_italian">🇮🇹 Italiano</string>
-  <string name="language_spanish">🇪🇸 Español</string>
+  <string name="language_traditional_chinese">🇭🇰 Traditional Chinese</string>
+  <string name="language_japanese">🇯🇵 Japanese</string>
+  <string name="language_korean">🇰🇷 Korean</string>
+  <string name="language_french">🇫🇷 French</string>
+  <string name="language_german">🇩🇪 German</string>
+  <string name="language_italian">🇮🇹 Italian</string>
+  <string name="language_spanish">🇪🇸 Spanish</string>
 
   <!-- Donate -->
   <string name="setting_page_donate">Donate</string>
@@ -642,29 +626,6 @@
   <string name="silicon_flow_built_in_models">* Built-in Silicon Flow free models are available without an API Key. For more powerful models, please apply and configure your own API Key.</string>
 
   <!-- Image Generation Page -->
-  <string name="imggen_page_title">Image Generation</string>
-  <string name="imggen_page_cancel_generation_title">Cancel Generation</string>
-  <string name="imggen_page_cancel_generation_message">Are you sure you want to cancel image generation?</string>
-  <string name="imggen_page_confirm">Confirm</string>
-  <string name="imggen_page_cancel">Cancel</string>
-  <string name="imggen_page_gallery">Gallery</string>
-  <string name="imggen_page_prompt_placeholder">Describe the image you want to generate...</string>
-  <string name="imggen_page_generate_image">Generate Image</string>
-  <string name="imggen_page_no_generated_images">No generated images</string>
-  <string name="imggen_page_image_saved_success">Image saved to gallery</string>
-  <string name="imggen_page_save_failed">Save failed: %1$s</string>
-  <string name="imggen_page_save">Save</string>
-  <string name="imggen_page_delete">Delete</string>
-  <string name="imggen_page_settings_title">Image Generation Settings</string>
-  <string name="imggen_page_model_selection">Model Selection</string>
-  <string name="imggen_page_model_selection_desc">Select AI model for image generation</string>
-  <string name="imggen_page_generation_count">Generation Count</string>
-  <string name="imggen_page_generation_count_desc">Number of images to generate each time</string>
-  <string name="imggen_page_aspect_ratio">Image Aspect Ratio</string>
-  <string name="imggen_page_aspect_ratio_desc">Select aspect ratio for generated images</string>
-  <string name="imggen_page_aspect_ratio_square">1:1 Square</string>
-  <string name="imggen_page_aspect_ratio_landscape">16:9 Landscape</string>
-  <string name="imggen_page_aspect_ratio_portrait">9:16 Portrait</string>
 
   <!-- Placeholder Names -->
   <string name="placeholder_current_date">Date</string>
@@ -739,6 +700,11 @@
   <string name="setting_display_page_developer_mode">Developer Mode</string>
   <string name="setting_display_page_developer_mode_desc">Show more debugging features. Not recommended for general users.</string>
     <string name="chat_message_tool_scrape_prefix">Scrape website: %1$s</string>
+  <!-- Greeting -->
+  <string name="greeting_morning">Good Morning</string>
+  <string name="greeting_afternoon">Good Afternoon</string>
+  <string name="greeting_evening">Good Evening</string>
+  <string name="greeting_night">Good Night</string>
   <string name="chat_message_tool_scrape_web">Scrape web page</string>
   <string name="search_ability_search">Search</string>
   <string name="search_ability_scrape">Scrape</string>

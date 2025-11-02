@@ -181,46 +181,32 @@ fun ChatDrawerContent(
                 }
             )
 
-            // 助手选择器
-            AssistantPicker(
-                settings = settings,
-                onUpdateSettings = {
-                    vm.updateSettings(it)
-                    scope.launch {
-                        val id = if (context.readBooleanPreference("create_new_conversation_on_start", true)) {
-                            Uuid.random()
-                        } else {
-                            repo.getConversationsOfAssistant(it.assistantId)
-                                .first()
-                                .firstOrNull()
-                                ?.id ?: Uuid.random()
-                        }
-                        navigateToChatPage(navController = navController, chatId = id)
-                    }
-                },
-                modifier = Modifier.fillMaxWidth(),
-                onClickSetting = {
-                    val currentAssistantId = settings.assistantId
-                    navController.navigate(Screen.AssistantDetail(id = currentAssistantId.toString()))
-                }
-            )
-
             Row(
                 modifier = Modifier.padding(horizontal = 12.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                DrawerAction(
-                    icon = {
-                        Icon(Lucide.Sparkles, "Menu")
+                AssistantPicker(
+                    settings = settings,
+                    onUpdateSettings = {
+                        vm.updateSettings(it)
+                        scope.launch {
+                            val id = if (context.readBooleanPreference("create_new_conversation_on_start", true)) {
+                                Uuid.random()
+                            } else {
+                                repo.getConversationsOfAssistant(it.assistantId)
+                                    .first()
+                                    .firstOrNull()
+                                    ?.id ?: Uuid.random()
+                            }
+                            navigateToChatPage(navController = navController, chatId = id)
+                        }
                     },
-                    label = {
-                        Text(stringResource(R.string.menu))
-                    },
-                    onClick = {
-                        navController.navigate(Screen.Menu)
-                    },
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    onClickSetting = {
+                        val currentAssistantId = settings.assistantId
+                        navController.navigate(Screen.AssistantDetail(id = currentAssistantId.toString()))
+                    }
                 )
 
                 DrawerAction(

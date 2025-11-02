@@ -59,8 +59,6 @@ import me.rerere.rikkahub.ui.pages.chat.ChatPage
 import me.rerere.rikkahub.ui.pages.debug.DebugPage
 import me.rerere.rikkahub.ui.pages.developer.DeveloperPage
 import me.rerere.rikkahub.ui.pages.history.HistoryPage
-import me.rerere.rikkahub.ui.pages.imggen.ImageGenPage
-import me.rerere.rikkahub.ui.pages.menu.MenuPage
 import me.rerere.rikkahub.ui.pages.setting.SettingAboutPage
 import me.rerere.rikkahub.ui.pages.setting.SettingDisplayPage
 import me.rerere.rikkahub.ui.pages.setting.SettingDonatePage
@@ -72,7 +70,6 @@ import me.rerere.rikkahub.ui.pages.setting.SettingProviderPage
 import me.rerere.rikkahub.ui.pages.setting.SettingSearchPage
 import me.rerere.rikkahub.ui.pages.setting.SettingTTSPage
 import me.rerere.rikkahub.ui.pages.share.handler.ShareHandlerPage
-import me.rerere.rikkahub.ui.pages.translator.TranslatorPage
 import me.rerere.rikkahub.ui.pages.webview.WebViewPage
 import me.rerere.rikkahub.ui.theme.LocalDarkMode
 import me.rerere.rikkahub.ui.theme.RikkahubTheme
@@ -223,13 +220,6 @@ class RouteActivity : ComponentActivity() {
                         AssistantDetailPage(route.id)
                     }
 
-                    composable<Screen.Menu> {
-                        MenuPage()
-                    }
-
-                    composable<Screen.Translator> {
-                        TranslatorPage()
-                    }
 
                     composable<Screen.Setting> {
                         SettingPage()
@@ -239,9 +229,6 @@ class RouteActivity : ComponentActivity() {
                         BackupPage()
                     }
 
-                    composable<Screen.ImageGen> {
-                        ImageGenPage()
-                    }
 
                     composable<Screen.WebView> { backStackEntry ->
                         val route = backStackEntry.toRoute<Screen.WebView>()
@@ -315,11 +302,6 @@ sealed interface Screen {
     @Serializable
     data class AssistantDetail(val id: String) : Screen
 
-    @Serializable
-    data object Menu : Screen
-
-    @Serializable
-    data object Translator : Screen
 
     @Serializable
     data object Setting : Screen
@@ -327,8 +309,6 @@ sealed interface Screen {
     @Serializable
     data object Backup : Screen
 
-    @Serializable
-    data object ImageGen : Screen
 
     @Serializable
     data class WebView(val url: String = "", val content: String = "") : Screen
